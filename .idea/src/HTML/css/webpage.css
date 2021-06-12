@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: lightgray;
+    font-family: 'Inter', sans-serif;
+}
+
+button {
+    border: 0;
+    background-color: gray;
+    color: white;
+    padding: 8px 24px;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: .875rem;
+}
+
+figure {
+    margin: 0;
+}
+
+h2 {
+    margin: 0 0 1.5rem 0;
+}
+
+.featured {
+    margin: 32px 50px;
+    display: flex;
+    background-color: white;
+
+}
+
+.featured > * {
+    flex: 1;
+}
+
+.featured figcaption {
+    background-color: white;
+}
+
+.featured figcaption div {
+    padding: 64px 48px;
+}
+
+.placeholder {
+    display: block;
+    background-color: gray;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.placeholder-square {
+    display: block;
+    background-color: gray;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50px 150px 1fr 50px;
+    grid-template-rows: 225px 75px 75px auto;
+}
+
+
+.main {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    align-self: start;
+}
+
+.breakout {
+    background-color: white;
+    display: flex;
+    padding: 32px 50px;
+}
+
+.breakout > :first-child,
+.featured > :first-child {
+    margin-right: 16px;
+}
+
+.breakout > * {
+    flex: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+}
+.flex-row > * {
+    flex: 1;
+}
+.flex-row > :not(:last-child) {
+    margin-right: 16px;
+}
+
+.product-cards {
+    padding: 32px 50px;
+    margin-bottom: 24px;
+}
+
+
+/* only animate if the device supports hover */
+@media (hover: hover) {
+    #creditcard {
+        /*  set start position */
+        transform: translateY(110px);
+        transition: transform 0.1s ease-in-out;
+        /*  set transition for mouse enter & exit */
+    }
+
+    #money {
+        /*  set start position */
+        transform: translateY(180px);
+        transition: transform 0.1s ease-in-out;
+        /*  set transition for mouse enter & exit */
+    }
+
+    button:hover #creditcard {
+        transform: translateY(0px);
+        transition: transform 0.2s ease-in-out;
+        /*  overide transition for mouse enter */
+    }
+
+    button:hover #money {
+        transform: translateY(0px);
+        transition: transform 0.3s ease-in-out;
+        /*  overide transition for mouse enter */
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.25rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.button:hover .button__text span {
+    transform: translateY(-0.25rem);
+    transition: transform .2s ease-in-out;
+}
+
+/* styling */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+
+
+.button {
+    border: none;
+    outline: none;
+    background-color: purple;
+    padding: 1rem 90px 1rem 2rem;
+    position: relative;
+    border-radius: 8px;
+    letter-spacing: 0.7px;
+    background-color: #5086bd;
+    color: #fff;
+    font-size: 21px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+    box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button__svg {
+    position: absolute;
+    overflow: visible;
+    bottom: 6px;
+    right: 0.2rem;
+    height: 140%;
+}
+
+.featuredpanda{
+
+    margin-left: 250px;
+
+}
+
+.featuredpandabox{
+
+    width: 300px;
+
+
+}
+
+
